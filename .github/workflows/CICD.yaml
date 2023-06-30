@@ -52,7 +52,7 @@ jobs:
             docker image pull username/mywebapp
             docker container stop mywebapp-prod
             docker container prune -f
-            docker run -d --name mywebapp-prod --restart unless-stopped -p 80:80 -p 443:443 anonymousity/mywebapp
+            docker run -d --name mywebapp-prod --restart unless-stopped -p 7005:7005 anonymousity/mywebapp
             docker image prune -f
             sudo firewall-cmd --add-port=<port_number>/9002 --permanent
             sudo firewall-cmd --reload
